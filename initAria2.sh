@@ -10,3 +10,4 @@ echo 'adding RPC listening port 6800'
 echo $(firewall-cmd --permanent --zone=public --add-port=6800/tcp)
 echo 'firewall reloading'
 echo $(firewall-cmd --reload)
+$(aria2c)
