@@ -14,3 +14,7 @@ echo 'adding listening port 80'
 echo $(firewall-cmd --permanent --zone=public --add-port=80/tcp)
 echo 'firewall reloading'
 echo $(firewall-cmd --reload)
+
+$(nginx)
+$(nginx -t)
+$(nginx -s reload)
