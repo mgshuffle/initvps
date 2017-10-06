@@ -20,3 +20,5 @@ firewall-cmd --list-all;
 echo 'change ssh port'
 sed -i "17a port $sshport" /etc/ssh/sshd_config;
 systemctl restart sshd;
+
+cat ./id_rsa.pub
