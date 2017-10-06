@@ -8,7 +8,7 @@ echo $(mv -f ./conf.d/* /etc/nginx/conf.d/)
 echo 'clone project ariaNG'
 echo $(git clone https://github.com/mgshuffle/AriaNg.git)
 echo 'copy ariaNG page'
-echo $(mv ./AriaNG /usr/share/nginx/)
+echo $(mv ./AriaNg /usr/share/nginx/)
 
 echo 'adding listening port 80'
 echo $(firewall-cmd --permanent --zone=public --add-port=80/tcp)
