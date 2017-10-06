@@ -21,10 +21,4 @@ echo 'change ssh port'
 sed -i "17a port $sshport" /etc/ssh/sshd_config;
 systemctl restart sshd;
 
-echo 'install python'
-echo $(yum -y install python-setuptools && easy_install pip)
-echo 'install git'
-echo $(yum -y install git)
-
-echo 'clone shadowsocksr from github'
-git clone -b manyuser https://github.com/mgshuffle/shadowsocksr.git;
+bash ./initSSR.sh
